@@ -1,11 +1,14 @@
 const express=require('express');
 const rutaCatalogo= express.Router();   
 
-const controladorCatalogo= require('../controllers/controllerCatalogo');
+const controladorrutaCatalogo = require('../controllers/controllerCatalogo');
+
+rutaCatalogo.get('/FrmrutaCatalogo',controladorrutaCatalogo.AbrirFrmrutaCatalogo);
+rutaCatalogo.get('/listarrutaCatalogos',controladorrutaCatalogo.listarrutaCatalogos);
+rutaCatalogo.post('/registrarrutaCatalogo',controladorrutaCatalogo.registrarrutaCatalogo);
+rutaCatalogo.get('/BuscarrutaCatalogo/:identificacion',controladorrutaCatalogo.BuscarrutaCatalogo);
+rutaCatalogo.post('/actualizarrutaCatalogo',controladorrutaCatalogo.actualizarrutaCatalogo);
+rutaCatalogo.post('/Eliminar_Usuario',controladorrutaCatalogo.Eliminar_Usuario);
 
 
-rutaCatalogo.get('/listar_Catalogos',controlador.listar_Catalogos);
-rutaCatalogo.post('/registrar_Catalogo',controlador.registrarCatalogos);
-
-
-module.exports= rutaCatalogo;
+module.exports= rutaCatalogo; 

@@ -5,7 +5,7 @@ const conexion=mysql.createConnection(
         host:"localhost",
         user:"root",
         password:"",
-        database:"calzado"
+        database:"calzado_en_la_nube"
     }
 );
 conexion.connect((error)=>{
